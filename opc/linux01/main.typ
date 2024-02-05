@@ -240,15 +240,56 @@
 
 ]
 
+
+#slide(title: "Cinnamon")[
+
+  #grid(
+    columns: (auto,auto),
+    gutter: 15pt,
+    text[
+      === 特徴
+      #v(0.5em)
+      - GNOME3のフォーク
+      - windowsっぽいデザイン
+      #v(1em)
+      === メリット・デメリット
+      #v(0.5em)
+      - #text(fill:blue)[分かりやすい配置]
+      - #text(fill:blue)[アニメーション少なめ]
+      - #text(fill:red)[何故か動作が激重]
+      - #text(fill:red)[ハードウェアアクセラレーションがポンコツ]
+    ],
+    text[
+      == 採用
+      - Debian,Ubuntu
+      - Linux Mint (default)
+      - Fedora
+      - ArchLinux
+      - GentooLinux
+    ]
+    )
+]
+
+#slide()[
+#figure(
+  image("images/cinnamon_debian.png",width: 90%)
+)
+
+]
+
+
 #slide(title:"まとめ")[
   = ワイ的おすすめ順
 
 #v(1em) 
 
-GNOME $approx$ KDE Plasma $gt$ Xfce $gt.triple$ Mate
-
+GNOME $approx$ KDE Plasma $gt$ Xfce $gt.triple$ Mate $gt$ Cinnamon
+#v(1em)
 
 - GNOMEは採用率No.1で扱いやすい
+- とにかく格好良さを求めるならKDE
+- 軽くて壊れにくいパッケージならXfce
+- 古い物好きはMate
 - 飽きたら他のやつを使えばいい（どれも）
 
 ]
