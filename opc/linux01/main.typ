@@ -29,7 +29,7 @@
   title:"デスクトップ環境で選べ",
   subtitle: "LinuxのGUI事情",
   authors: "OECU Programming Circle 岡本 悠吾",
-  date: "2024-hoge-hoge",
+  date: "2024-2-14",
   institution-name: "OPC"
   )
 
@@ -122,6 +122,12 @@
 
 ]
 
+#slide()[
+#figure(
+  image("images/gnome.jpeg",width: 90%)
+)
+]
+
 
 #slide(title: "KDE Plasma")[
 
@@ -173,7 +179,8 @@
 
       === 特徴
       #v(0.5em)
-      - 軽さが売りのDE
+      - 軽い!速い!
+        - スイスポかな？
       - UNIX哲学に則ったデザイン
       #v(1em)
       === メリット・デメリット
@@ -235,7 +242,7 @@
 
 #slide()[
 #figure(
-  image("images/mate01.png",width: 90%)
+  image("images/mate01.png",width: 80%)
 )
 
 ]
