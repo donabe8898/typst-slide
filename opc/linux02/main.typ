@@ -46,45 +46,38 @@
 ]
 
 // ほんへ
-#slide(title: "世の中には様々なOSがある")[
-  カーネル別OSまとめ
-  - *Windows NT* (10,11)
-  - DOS (MS-DOS, FreeDOS, Human68k)
-  - *Darwin/XNU* (macOS, iOS, iPad OS, Watch OS)
-  - *Linux* (Ubuntu, Android)
-  - BSD (FreeBSD, OpenBSD, NetBSD, Dragonfly BSD)
-  - SunOS (Solaris, OpenIndiana)
-  - TRON (μITRON)
+#slide(title: "What's ArchLinux?")[
+  == Linux Distributionの一つ
+    - ディストリビューション: 頒布物
+      - Linuxはカーネルの名前なのでユーザーアプリケーションは別のやつを使う.
 
-十人十色
+  == 有名なディストロ
+  - Ubuntu
 
+  == Archは星の数ほどあるDistroの一つ
 ]
 
-#slide(title: "なぜ推すのか")[
+#slide(title: "Linuxディストロの利用例")[
+  - ゲームやwebのサーバー
+    - 一番よくある使われ方
+    - Minecraft(JE,BE)やnginx, Apache鯖など...
 
+  - デスクトップOS
+    - C,C++での競技プログラミング
+    - Webプログラミング
+
+  - 携帯電話
+    - Android
 ]
 
-#slide(title: "なぜ推すのか")[
-  - プログラミング技術は高い
-    - ゲーム制作, プログラミング実習, 競プロ・アルゴリズムの授業etc..
-]
-
-#slide(title: "なぜ推すのか")[
-  - プログラミング技術は高い
-    - ゲーム制作, プログラミング実習, 競プロ・アルゴリズムの授業etc..
-
-  === プログラムは書けるのに環境を構築・管理できない
-
-  - 自分の商売道具は自分で整備できるようになりましょう
-]
 
 // KISSの法則
-#slide(title: "ArchLinuxって何がいいの？")[
+#slide(title: "ArchLinuxの最大の特徴")[
 ]
 
-#slide(title: "ArchLinuxって何がいいの？")[
+#slide(title: "ArchLinuxの最大の特徴")[
   #v(6em)
-  = A. KISSの法則を徹底しているのが良い
+  = A. KISSの法則に沿った開発・運営
 ]
 
 
@@ -100,56 +93,11 @@
   === ソフトウェア開発において、度々議論に挙がるマインド
 ]
 
-#slide(title: "シンプルじゃない例")[
-  = Windows11
-  ===  ゲーム実況者Aさん
-  毎日10時間ゲーム配信
-  #v(2em)
-  - ゲームクライアントと配信ソフト
-  - メッセンジャー
-  - ドライバー
-]
 
-
-
-#slide(title: "シンプルじゃない例")[
-  == ゲームクライアント
-  - XBOX → Steam使うからいらない
-  == メッセンジャー
-  - Teams → Gmail, discord使うからいらない
-  == ドライバー
-  - 最適化してFPS上げたい → ブラウザないとインストールできない
-  - ドライバーが動かない → 設定項目どこ... レジストリ... ?
-]
-
-
-
-#slide(title: "シンプルじゃない例")[
-#v(1em)
-  = #text(fill:black)[いらないものが多い！]
-  #v(1em)
-  と同時に
-  #v(1em)
-  = #text(fill:black)[どこに何があるか分からない！]
-
-]
-
-#slide(title: "シンプルじゃない例")[
-#v(1em)
-  = #text(fill:black)[いらないものが多い！]
-  #v(1em)
-  と同時に
-  #v(1em)
-  = #text(fill:black)[どこに何があるか分からない！]
-  #v(1em)
-  だから
-  #v(1em)
-  = #text(fill:red)[シンプルじゃない！]
-]
 
 // ArchLinux特徴
 
-#slide(title: "ArchLinuxの特徴")[
+#slide(title: "ArchLinux利用のメリット")[
   = その1. シンプル
   #v(1em)
   - インストール直後の環境
@@ -163,7 +111,7 @@
 
 ]
 
-#slide(title: "ArchLinuxの特徴")[
+#slide(title: "ArchLinux利用のメリット")[
   = その2. ローリング・リリース
   #v(1em)
   - ローリング・リリース
@@ -172,104 +120,80 @@
 
     - 半永久的に同じOSを使い続けられる
 #v(1em)
-  Q. OSのアップデートはどうするの？
 
-  A. パッケージマネージャーに*全てお任せ*
 ]
 
 #slide(title: "ArchLinuxの特徴")[
-  = その3. Pacman
-]
-
-#slide()[
-    #figure(
-    image("pacman.jpg",width: 90%)
-  )
-]
-
-
-
-#slide(title: "ArchLinuxの特徴")[
-  = その3. Pacman
+  = その3. ドキュメントが充実している
   #v(1em)
-  - Arch系ディストロのパッケージマネージャ
+  - ArchLinux Wiki
+    - URL: #link("https://wiki.archlinux.jp/index.php/メインページ")
 
-  == aptやHomebrewとの違い
-  - 扱うパッケージ（ソフトウェア）は常に最新
-  - 設定項目が単純（/etc/pacman.confをいじるだけ）
-  - *OSのアップデートにも使う*
-
-]
-#slide(title: "通常のOS update")[
-  == Ubuntu
-  + ソフトウェアセンター（GUI）を開く
-  + アップデートを押す
-
-  == Windows
-  1. 設定→Windows Update
-  2. 場合によっては強制再起動
+  - ArchLinuxに入るパッケージのインストール方法, 設定方法
+  - よくある不具合のQ & A
 
 ]
+#slide(title: "ArchLinuxの特徴")[
+  = その3. ドキュメントが充実している
+  #v(1em)
+  - ArchLinux Wiki
+    - URL: #link("https://wiki.archlinux.jp/index.php/メインページ")
 
-#slide(title: "通常のOS update")[
-  == Ubuntu
-  + ソフトウェアセンター（GUI）を開く
-  + アップデートを押す
+  - ArchLinuxに入るパッケージのインストール方法, 設定方法
+  - よくある不具合のQ & A
 
-  == Windows
-  1. 設定→Windows Update
-  2. 場合によっては強制再起動
+  = #text(fill:red)[ArchLinux使いでなくでも必見]
 
-  - 自分が入れたソフトウェアはアップデートされない
-
-  - 使わないソフトウェアや機能も同時にアップデート
-  - 使わないのに容量だけ喰う
+]
+#slide(title: "ArchLinuxの特徴")[
+  #v(1em)
+  === 情報量が多すぎる
+  - StackOverflowや知恵袋を見ても解決できなかった問題ががあっさり直る
+    - Linuxの教科書
+    #v(1em)
+  === ディストロに依らない情報
+  - Arch自体がシンプル→ディストロ固有の問題なのかどうか分かる
+  - UNIX全体に通用する知識
 
 ]
 
 
 
-#slide(title: "ArchLinuxのアップデート")[
-
-  ```sh
-  sudo pacman -Syu
-  ```
-  - OSを含むpacman経由でインストールしたソフトウェアが最新かどうかCheck
-  - 最新でなければアップデート
-    - カーネルは再起動すればアプデ反映
-
-  === OSの基本機能, 応用ソフト問わず全てをアップデートできる
-  === 常に最新！セキュリティ万全！
-]
-
-#slide(title: "ArchLinuxのアップデート")[
-
-  ```sh
-  sudo pacman -Syu
-  ```
-  - OSを含むpacman経由でインストールしたソフトウェアが最新かどうかCheck
-  - 最新でなければアップデート
-    - カーネルは再起動すればアプデ反映
-
-]
 
 #slide(title: "ArchLinuxの特徴")[
-  = その4. Arch Build System
+  = その4. コンピュータに少しだけ強くなる
+  #v(1em)
+  - なにか起きたら自分で何とかしてｽﾀﾝｽ
+
+  - 問題発生→原因究明→ドキュメント閲覧→解決
+
+  - グラフィカルなインストーラは無い
+    - パーティション割りやネットワーク設定などは自分でどうぞ
+
+  #text(fill:red)[毎日使えばちょっとは詳しくなる...かも?]
 ]
 
+
+
+
+
 #slide(title: "ArchLinuxの特徴")[
-  = その4. Arch Build System
+  = その5. Arch Build System
+  #v(1em)
   - ソースコードのビルドとpacman用パッケージの作成を自動化するためのシステム
     - portsみたいなもの
 
-  - `PKGBUILD`ファイルに手順を書けば、コンパイルからパッケージング、インストールまで全て自動化できる
-    - `PKGBUILD`とソースコードさえ持っていれば、コマンド一発でソフトのインストールが可能
+  - `PKGBUILD`ファイルに手順を書けば、ソースコードの取得, コンパイル, パッケージング, インストールまで全て自動化できる
 
-  - `PKGBUILD`を一般ユーザーが配布
-    - AUR（Arch User Repository）
 ]
 
-#slide(title: "AURに登録されているソフトウェア")[
+
+#slide(title: "ArchLinuxの特徴")[
+
+  = Arch User Repository
+
+  - `PKGBUILD`を一般ユーザーが配布
+
   - *Google Chrome, VSCode, Spotify, Slack*
     - ライセンスがフリーソフトウェアのものではない
 
@@ -279,35 +203,35 @@
 
 ]
 
-#slide(title: "AURに登録されているソフトウェア")[
-  - *Google Chrome, VSCode, Spotify, Slack*
-    - ライセンスがフリーソフトウェアのものではない
 
-  - *pacmanにあるソフトの開発版*
-    - 試験的に使ってみたい人向け
+#slide(title: "まとめ")[
+  ArchLinuxとは
 
-  #v(2em)
-  == #text(fill:blue)[pacman+AUR => Debian並のパッケージ数]
+  + #text(fill:blue)[シンプル]
+  + #text(fill:blue)[自由]
+  + #text(fill:blue)[分かりやすい]
+
+  の三拍子が揃った *ウルトラスーパーデラックスDistribution*
+
+  - DIY好き, 自分で制御したい人にお薦め
+
 ]
-
 #focus-slide()[
-  さあ、あなたもArchをインストールして
-
-  圧倒的成長を遂げよう
+  さあ、あなたもArchをインストールしてみましょう
 ]
 
 #slide(title: "ArchLinuxをインストール")[
   #v(1em)
   検索「ArchLinux インストール」
 
-  ArchLinux Wiki
+  ArchLinuxと似たようなOS
+  - Gentoo Linux
+    - ソフトウェアはソースからコンパイルする主義
+    - ドM向き
 
-  - #link("https://wiki.archlinux.jp/index.php/メインページ")
-    - *Linuxの教科書*
-
-  - VMか中古のThinkPadがオススメ
-  - 下手な知恵袋見るよりこっち
-  - 使えば使うほどスキルが上がっていく
-    - 問題↔解決サイクル
+  - FreeBSD
+    - Not Linux
+    - 正統派UNIXを使いたいならコレ
+    - ディスク使用率が高い場合でも安定して動作（鯖向き）
 
 ]
