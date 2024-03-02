@@ -80,15 +80,15 @@
 
   + *メモリ安全*
     #v(0.5em)
-    - 変数の所有権, 借用チェッカー, 参照, 超強力な型システム
     - メモリ(RAM)系のバグやセキュリティーホールから守る
       - Java, Go, Python
+    - 変数の所有権, 借用チェッカー, 参照, 超強力な型システム
     #v(0.5em)
 
   + *実行速度が爆速*
     #v(0.5em)
     - コンパイラ基盤`llvm`を使用
-    - ガベージコレレクションが無い
+    - ガベージコレクションが無い
       - メモリ安全な言語でGCが無いのはこいつだけ
     - 理論上, C言語と同等速度
 
@@ -96,7 +96,7 @@
 
   + *IDEレスで開発可能*
     #v(0.5em)
-    - `rustup`, `cargo`などの有能ソフトウェアが標準で付属 #magnify.r
+    - `rustup`, `cargo`などの有能ソフトウェアが標準で付属
 
 ]
 
@@ -104,23 +104,47 @@
 
 #new-section-slide("環境構築")
 
-#slide(title:"Rustのインストール")[
-  == macOS, GNU/Linux, xBSD, Solaris
-  #v(0.5em)
-  + #crab パッケージマネージャーから (*推奨*)
-    ```sh
-    sudo apt install rustup # Debain
-    sudo pacman -S rustup  # Arch
-    brew install rustup # macOS
-    sudo pkg install rustup # FreeBSD
-    ```
+#slide(title: "何をインストールするの?")[
+  + *rustup*: Rustのコンパイラやツール群をインストールするためのマネージャ
 
-  + #crab curlから
+    - cargo: デバッグ、ビルド、ドキュメント生成、テストなど様々なことができる万能ツール
+    - clippy: リンター
+    - rust-analyzer: LSP. テキストエディタで自動補完やセーブ時にフォーマットできたりする
+    - rust-docs: 公式ドキュメントのコピー
+    - rustfmt: フォーマッタ
+
+]
+
+#slide(title: "UNIX likeを使っている人")[
+  == macOS, ※GNU/Linux, xBSD, Solaris
+  #v(1em)
+  + #crab webサイトにこれが載ってる
     ```sh
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     ```
+
+    - rustupから必要なツールチェインのインストールもやってくれます
 ]
-#slide(title:"環境構築")[
+
+
+#slide(title:"ローリング・リリースのLinux")[
+  #v(0.5em)
+  + Arch GNU/Linuxユーザーはパッケージマネージャから入れるのがオススメ
+    ```sh
+    sudo pacman -S rustup
+    ```
+
+  + rustupからツールチェインをインストール
+    ```sh
+    rustup default stable
+    ```
+    - toolchainのstable版（一番安定しているやつ）をインストール
+      - よく使うのはstable版, nightly版
+
+]
+
+
+#slide(title:"窓ユーザーはすこしめどい")[
 
   == Windows10, 11
   #v(0.5em)
@@ -138,29 +162,10 @@
 #link("https://play.rust-lang.org/?version=stable&mode=debug&edition=2021")
 
 ]
-// Rustのインストール
-#slide(title:"便利なツールをインストール")[
-  ```sh
-  rustup default stable
-  ```
-  #v(2em)
-  - toolchainのstable版（一番安定しているやつ）をインストール #crab
-    - よく使うのはstable版, nightly版
-]
+
+#new-section-slide("インストールできた方は反応ください")
 
 
-#slide(title: "componentとは")[
-  開発を便利にする公式ツール
-  #v(0.5em)
-  - clippy: リンター
-  - rust-analyzer: LSP. テキストエディタで自動補完やセーブ時にフォーマットできたりする
-  - rust-docs: 公式ドキュメントのコピー
-  - rustfmt: フォーマッタ
-
-  #v(2em)
-
-  ```sh rustup component add HOEHOGE```で追加インストール可能
-]
 //Hello,world
 
 #new-section-slide("プロジェクトの作成")
@@ -294,6 +299,36 @@
   }
   ```
 ]
+
+#new-section-slide("めちゃくちゃ変な回答")
+
+#slide()[
+  ```rs
+  fn main() {
+    let fz = 66;
+    let ans = if fz % 15 == 0 {
+        "fizzbuzz"
+    } else if fz % 5 == 0 {
+        "buzz"
+    } else if fz % 3 == 0 {
+        "fizz"
+    } else {
+        "none"
+    };
+    println!("{}", ans);
+}
+  ```
+]
+
+#slide(title: "if文ではなくif式")[
+  - Rustのifは結果を返す
+  - これを利用すると三項演算子みたいに扱うことができる
+
+  - `;`は途中式であることを表す
+
+  = `;`が付いていない値が出てきた時点で、スコープの外側に戻り値として値が返される
+]
+
 
 // コンパイル
 // typst compile 01.typ /home/yugo/git/donabe/typst-slide/opc/RustProgramming/01/{n} --format png
