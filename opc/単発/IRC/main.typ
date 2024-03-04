@@ -16,7 +16,7 @@
 
 
 #show link: set text(blue)
-#set text(font: "Noto Sans CJK JP")
+#set text(font: "Noto Sans CJK JP",size:18pt)
 #show heading: set text(font: "Noto Sans CJK JP")
 #show raw: set text(font: "Noto Sans Mono CJK JP")
 #show raw.where(block: true): block.with(
@@ -35,11 +35,58 @@
   extra: "OECUプログラミングサークル"
 )
 
-#slide(title: "本講義の目的")[]
+#slide(title: "本講義の目的")[
+  - IRCの仕組みを知る
+]
+
+#slide(title: "IRC")[
+  - Internet Relay Chat
+    - サーバーを経由してクライアント同士でチャトができる仕組み
+    - OSI参照モデル → アプリケーション層
+
+  - 1988年にネット掲示板で使われていた技術の代用として開発
+
+  *LINEやDiscordの先祖*
+]
 
 
+#slide(title:"特徴")[
+  + 中央集権
+    - 1サーバーに複数のチャンネルを作成してユーザーがそこに入る
 
+  + 連携
+    - サーバー同士を連携させることが可能
+    - 連携先と連携者のサーバーで同一のチャンネルが作成
+      - 片方のサーバーが落ちてももう片方でチャットを継続
 
+  + 秘匿性
+    - サーバーにログインしないとメッセージが閲覧できない
+    - サーバーにメッセージが残らない→ログイン以前のやりとりが見えない
+    - 通信内容は暗号化されない
+      - TLSで暗号化することも可能
+]
+
+#slide(title: "使ってみよう")[
+
+  = クライアントソフトウェア
+  - *HexChat* (Win, Linux)
+  - Pidgin (BSD, Linux, Solaris)
+  - LimeChat (Win, mac)
+
+    - 「IRC client」で検索すると出てくる
+]
+
+#slide(title: "サーバーにログイン")[
+
+  + Network Listで「追加」を押す
+  + ネットワークの名前を決める（各自のお好みで）
+  + ネットワークを選択したまま「編集」を押す
+  + 「サーバー」タブのipとポートを`irc.donabe8898.dev/6697`に設定
+  + 「このネットワークのすべてのサーバーへはSSLを使う」にチェックを入れる
+  + 「不正なSSL証明書を受け入れる」にチェックを入れる
+  + 「パスワード」を`serverDona9118`に設定する
+  + 閉じて接続
+]
 
 // 本講義の目的
 // 1. クライアントサーバーシステムの基礎知識
