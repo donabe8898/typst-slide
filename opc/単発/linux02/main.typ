@@ -31,7 +31,7 @@
   title:"ArchLinuxの勧誘",
   subtitle: "オタク向けデスクトップOSをインストールする",
   author: "岡本 悠吾",
-  date: "2024-hoge-hoge",
+  date: "2024-3-15",
   extra: "OECU Programming Circle "
 )
 
@@ -194,7 +194,7 @@
   - 新しいモノ好き
   #v(1em)
   == おすすめできない人
-  - めんどくさがり（保守がだるいって人は除く）
+  - めんどくさがり
   - Linux触ったこと無い人（Ubuntuから入れてくれ）
 ]
 #focus-slide()[

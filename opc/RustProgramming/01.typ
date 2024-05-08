@@ -45,8 +45,6 @@
   #v(1em)
   + Rustのプログラミング環境を構築できる
 
-  + 変数とif文が使えるようになる
-
 
   #v(5em)
   = 備考
@@ -204,130 +202,7 @@
   - まさかのHello,worldを書かなくてもおk✨
 ]
 
-#new-section-slide("変数")
 
-#slide(title: "letキーワード")[
-  - 変数宣言は「`let 変数名 = 値;`」 #crab
-    - 変数は不変（イミュータブル）
-    - 型推論あり
-
-  - ミュータブル(再代入可能)にするには`mut`を追記
-
-  - シャドーイングOK
-    - 同じ名前の変数を何度も定義すること
-]
-#slide()[
-  ```rs
-  let a:i64 = 10;
-  a = 1; // Error!
-  let mut a: i64 = 10;
-  a = 20; // OK!
-
-  let b = 5; // これでもおk
-
-  let love = 😻; // 絵文字もいけるぞ！
-  ```
-]
-
-#slide(title: "型について")[
-  = int（整数型）
-  #v(0.5em)
-  - `i8`, `i16`, `i32`, `i64`, `isize`
-  - `i`のうしろはBit数
-  - `size`はOSのBit数に依存
-
-  = uint（符号なし整数型）
-  #v(0.5em)
-  - `u8`, `u16`, `u32`, `u64`, `u128`, `usize`
-
-  = float
-  #v(0.5em)
-  - `f32`, `f64`
-    - 基本的に`f64`を使えばよい
-
-]
-
-#slide(title: "if式")[
-  - `if`式を用いて条件分岐できる #crab
-    - C,C++のように`if`のあとの`()`は不要
-
-  ```rs
-  let a = 50;
-  if a > 49 {
-    println!("over 50");
-  }else if a < 49{
-    println!("under 50");
-  }else{
-    println!("{}",50);
-  }
-  ```
-]
-
-#slide(title: "標準出力")[
-  - `println!()`マクロで標準出力ができる #crab
-    - `!`が付いてたらマクロ
-
-  - 変数を出力するには`{}`を使う
-    - format
-
-  ```rust
-  println!("文字列のみの出力");
-  let f = 3.14;
-  println!("円周率は{}", f);
-  ```
-
-]
-
-#new-section-slide("練習問題")
-
-#slide(title:"練習問題1")[
-
-  - 変数`fz`には符号なし整数が入ります.
-  - 15の倍数であれば`fizzbuzz`, `fz`が3の倍数であれば`fizz`, 5の倍数であれば`buzz`と出力してください.
-  - 以上のどれでもなければ`none`と出力してください.
-
-  ```text
-  fz = 60 -> fizzbuzz
-  fz = 65 -> buzz
-  fz = 66 -> fizz
-  ```
-
-  ```rs
-  fn main(){
-    let fz: usize = NUM;
-    // これ以降にコードを書く
-  }
-  ```
-]
-
-#new-section-slide("めちゃくちゃ変な回答")
-
-#slide()[
-  ```rs
-  fn main() {
-    let fz = 66;
-    let ans = if fz % 15 == 0 {
-        "fizzbuzz"
-    } else if fz % 5 == 0 {
-        "buzz"
-    } else if fz % 3 == 0 {
-        "fizz"
-    } else {
-        "none"
-    };
-    println!("{}", ans);
-}
-  ```
-]
-
-#slide(title: "if文ではなくif式")[
-  - Rustのifは結果を返す
-  - これを利用すると三項演算子みたいに扱うことができる
-
-  - `;`は途中式であることを表す
-
-  = `;`が付いていない値が出てきた時点で、スコープの外側に戻り値として値が返される
-]
 
 
 // コンパイル
