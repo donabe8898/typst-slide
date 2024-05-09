@@ -1,3 +1,5 @@
+// typst compile 01.typ /home/yugo/git/donabe8898/typst-slide/opc/並行prog/第1回/{n} --format png
+
 #import "@preview/polylux:0.3.1": *
 #import themes.clean: *
 
