@@ -1,4 +1,4 @@
-// typst compile 01.typ /home/yugo/git/donabe8898/typst-slide/opc/並行prog/第1回/{n} --format png
+// typst compile 01.typ /home/yugo/git/donabe8898/typst-slide/opc/並行prog/01/第1回/{n}.png --format png
 
 #import "@preview/polylux:0.3.1": *
 #import themes.clean: *
@@ -33,12 +33,38 @@
 )
 
 #slide(title: "本講義のターゲット層")[
-  - Linux好き 🐧
-  - ゲーム好き 🎮
-  - パソコン好き 🖥
-  - プログラミング好き 💾 *一番重要*
-  - 問題解決好き ❗
-  - めんどくさいのが嫌い 😮‍💨
+  - サーバーに興味がある
+  - モダンな言語を習得したい
+]
+
+#slide(title: "自己紹介")[
+  = 岡本 悠吾 - Yugo Okamoto
+
+  #v(0.5em)
+
+  - T学科4回生
+  - サークル内でLinux関連の講義をやってます
+  - 先日内定もらいました〜 Happy〜♪
+
+  #v(1em)
+
+  #grid(
+    columns: (200pt,auto),
+    text[
+      == すきなもの
+      - 鉄道
+      - ガソリン車
+      - コンピュータ
+      - ゲーム
+      - 蕎麦
+
+    ],
+    text[
+      == きらいなもの
+      - きのこ類
+    ]
+
+  )
 ]
 
 #focus-slide(foreground:white, background: teal)[
@@ -207,7 +233,92 @@
 ]
 
 // TODO: 4. 並行処理と並列処理
+#new-section-slide("Section 3. 並行処理と並列処理")
+
+#slide()[
+  = 並行と並列
+  #v(1em)
+  - 並行は*ある範囲で複数の処理を独立に実行できる構成*
+  - 並列は*ある時点で物事の処理が同時に実行*
+
+    - Golangは*並行処理*
+
+]
+
+#slide()[
+  // 並行と並列の図
+  #figure(
+    image("01素材/並列と並行.svg",width: 90%)
+  )
+]
+
+
+
 // TODO: 5. Golangの基礎文法(写経)
+#new-section-slide("Section 4. Goの基礎")
+
+#slide()[
+  = 写経タイム!!!!
+  #v(1em)
+  - Discordに貼ったPDFのソースコードを写経（丸写し）しましょう。
+
+    - なるべく自分でタイピングすることを*強く*おすすめします
+  #v(1em)
+  - 写経できた人はVCステータスを「できた!」にしてください
+  - 質問がある人はテキストチャットかVCでどうぞ
+]
+
+#new-section-slide("解説")
 // TODO: 6. 練習問題1
+#new-section-slide("Section 5. 練習問題 1")
+
+#slide()[
+  = 次の問題を解きましょう
+  #v(1em)
+   - #link("https://atcoder.jp/contests/abc052/tasks/abc052_a")[https://atcoder.jp/contests/abc052/tasks/abc052_a]
+   #align(left)[
+    #figure(
+      image("01素材/probrem01.png",width: 50%)
+    )
+   ]
+]
+
 // TODO: 7. goルーチン（写経）
-// TODO: 8. 練習問題2
+#new-section-slide("Section 6. goルーチン")
+
+#slide()[
+  = goルーチン
+  #v(1em)
+  - Golangの並行処理を司る仕組み
+    - 関数の前に`go`をつける
+  #v(1em)
+
+  ```Go
+  go funcA()
+  time.Sleep(3 * time.Second)
+  ```
+]
+
+#slide()[
+  = 写経タイム!!!!
+  #v(1em)
+  - Discordに貼ったPDFのソースコードを写経（丸写し）しましょう。
+
+    - なるべく自分でタイピングすることを*強く*おすすめします
+  #v(1em)
+  - 写経できた人はVCステータスを「できた!」にしてください
+  - 質問がある人はテキストチャットかVCでどうぞ
+]
+
+
+#slide(title: "解説")[
+  #figure(
+    image("01素材/並行処理1.svg",width: 50%)
+  )
+]
+
+#slide(title: "次回")[
+  - 次回は並行処理を採用する場合について説明
+
+  == 並行処理は必ずしも優秀ではない
+]
