@@ -167,7 +167,7 @@
   == 対応OS
     Linux, macOS, FreeBSD, NetBSD, OpenBSD, DragonFly BSD
 
-    Plan 9 from Bell LabsSolaris, Microsoft Windows NT
+    Plan 9 from Bell Labs, Solaris, Microsoft Windows NT
 
     iOS, Android, AIX, illumos
 
