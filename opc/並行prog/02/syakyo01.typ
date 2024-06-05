@@ -3,9 +3,9 @@
 #show heading: set text(font: "Noto Sans CJK JP")
 #show raw: set text(font: "0xProto Nerd Font")
 #show raw.where(block: true): block.with(
-  fill: luma(240),
+  fill: luma(245),
   inset: 10pt,
-  radius: 4pt
+  radius: 10pt
 )
 
 

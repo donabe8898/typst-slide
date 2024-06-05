@@ -24,7 +24,7 @@
 // TODO: 本文
 
 #title-slide(
-  title: "Goの並行処理であそぼう 🐭",
+  title: "Goの並行処理であそぼう",
   subtitle: "(第二回) 並行処理はむずい",
   authors: "Yugo Okamoto a.k.a donabe8898",
   date: none,
@@ -229,4 +229,3 @@ func main() {
 }
 ```
 ]
-
