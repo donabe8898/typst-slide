@@ -183,26 +183,57 @@ pointer
   #text()[
     #set align(center)
     ```cpp
-    #include <cstdlib>
     #include <iostream>
-    #include <vector>
 
-    int main() {
-      std::vector<int> arr = {6, 1, 3, 2, 8, 2, 4, 9};
-      for (int i = 0; i < arr.size(); ++i) {
-        for (int j = 1; j < arr.size() - i; ++j) {
-          if (arr[j - 1] > arr[j]) {
-            std::swap(arr[j], arr[j - 1]);
-          }
-        }
-      }
+void swap(int *a, int *b) {
+  int tmp = *a;
+  *a = *b;
+  *b = tmp;
+}
 
-      for (int i : arr) {
-        std::cout << i << ", ";
-      } // 1, 2, 2, 3, 4, 6, 8, 9,
-      std::cout << std::endl;
-      return EXIT_SUCCESS;
+int partition(int arr[], int l, int r) {
+  int pivot = arr[r];
+  int i = (l - 1);
+
+  for (int j = l; j < r; j++) {
+    if (arr[j] <= pivot) {
+      i++;
+      swap(&arr[i], &arr[j]);
     }
+  }
+  swap(&arr[i + 1], &arr[r]);
+  return (i + 1);
+}
+
+void quickSort(int arr[], int l, int r) {
+  if (l < r) {
+    int pivot = partition(arr, l, r);
+    quickSort(arr, l, pivot - 1);
+    quickSort(arr, pivot + 1, r);
+  }
+}
+
+int main() {
+  int l;
+  int arr[8] = {6, 1, 3, 2, 8, 2, 4, 9};
+  quickSort(arr, 0, sizeof(arr) / sizeof(arr[0]) - 1);
+
+  for (int i : arr) {
+    std::cout << i << ", ";
+  }
+  std::cout << std::endl;
+  return 0;
+}
     ```
   ]
 ]
+
+// TODO: 選択ソート, ヒープソート
+
+
+// TODO: 挿入ソート, シェルソート
+// TODO: マージソート
+
+// TODO: 線形サーチ
+// TODO: バイナリサーチ（二分探索）
+// TODO: bit全探索
